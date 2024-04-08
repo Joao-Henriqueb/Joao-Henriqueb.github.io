@@ -1,0 +1,146 @@
+.formacao {
+  background-color: #0e0e0e;
+}
+.formacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  padding: 120px 20px;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  position: relative;
+}
+.formacao-container::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 150px;
+  background: url("../img/deco.svg") no-repeat center;
+  position: absolute;
+  bottom: -75px;
+}
+
+.formacao .subtitulo {
+  max-width: 5ch;
+  color: black;
+  margin-top: 2rem;
+}
+.formacao .formacao-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #717171;
+  max-width: 38ch;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.formacao .formacao-texto strong {
+  color: #f7f7f7;
+}
+.faculdade-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 60px;
+}
+.faculdade {
+  background-color: #090909;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.faculdade-tipo {
+  color: #b2b2b2;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.faculdade-curso {
+  flex: 1;
+  color: white;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.faculdade-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#8ad5fe, #3f95e1);
+  position: absolute;
+  left: -23px;
+}
+.faculdade-instituicao {
+  color: #b2b2b2;
+  font-size: 1.125rem;
+}
+
+.formacao-extra {
+  color: white;
+}
+
+.cursos {
+  margin-bottom: 3rem;
+}
+.formacao-extra h3 {
+  color: #717171;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.formacao-extra h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -2px;
+}
+.cursos h3::before {
+  background: url("../img/Group.svg") no-repeat center center;
+}
+.idiomas h3::before {
+  background: url("../img/Vector.svg") no-repeat center center;
+}
+
+.formacao-extra li {
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.formacao-extra span {
+  color: #717171;
+  font-weight: 400;
+}
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao .subtitulo {
+    color: white;
+  }
+  .formacao .formacao-texto {
+    font-size: 1.25rem;
+  }
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}
